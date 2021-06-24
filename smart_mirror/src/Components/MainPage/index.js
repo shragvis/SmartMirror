@@ -7,8 +7,8 @@ const MainPage = ()=> {
     
     return(
         <div>
-            <Greeting />
-            <Clock />
+            <Clock/>
+    
         </div>
     ); 
 }

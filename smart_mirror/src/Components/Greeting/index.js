@@ -1,7 +1,7 @@
 import React, {useState} from 'react'; 
 
 const Greeting = ()=>{
-    const [name,setName] = useState("Right click me to set your name");  // this is a state storing the user's name
+    const [name,setName] = useState("Shragvi! ");  // this is a state storing the user's name
     const [promptOpen,setPromptOpen] = useState(false); // this is a state that is false if the prompt is closed and true if the prompted is open
     const [inputValue, setInputValue] = useState("");  // this keeps track of the user inputted value of the prompt
 
