@@ -1,7 +1,23 @@
 import React, {useState} from 'react'; 
-
+const styleSheet = {
+    div: {
+        paddingLeft: "50px",
+        fontSize: "20px",
+        fontFamily: "Rajdhani",
+        position: "absolute",
+        top: "100px",
+        left: "540px"
+    },
+    top:{
+        marginBottom: "0px",
+    },
+    bot:{
+        marginTop: "0px"
+    }
+    
+}
 const Greeting = ()=>{
-    const [name,setName] = useState("Shragvi! ");  // this is a state storing the user's name
+    const [name,setName] = useState("Shragvi!");  // this is a state storing the user's name
     const [promptOpen,setPromptOpen] = useState(false); // this is a state that is false if the prompt is closed and true if the prompted is open
     const [inputValue, setInputValue] = useState("");  // this keeps track of the user inputted value of the prompt
 
@@ -23,7 +39,7 @@ const Greeting = ()=>{
     } // this is called object destructuring
 
     return (
-        <div>
+        <div style = {styleSheet.div}>
             <h1>Hello <span onContextMenu={clickHandler}> {name} </span></h1> 
             {/*this will only render what is in the "{}" when promptOpen is true*/}
             { promptOpen && <div>

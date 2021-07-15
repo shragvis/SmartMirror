@@ -1,6 +1,16 @@
-import React, {useState,useEffect} from 'react'; 
+import React, {useState,useEffect} from 'react';
 const styleSheet = {
-    paddingLeft: "50px"
+    div: {
+        paddingLeft: "50px",
+        fontSize: "12px",
+        fontFamily: "Rajdhani"
+    },
+    top:{
+        marginBottom: "0px",
+    },
+    bot:{
+        marginTop: "0px"
+    }
     
 }
 const Clock = ()=>{
@@ -8,7 +18,7 @@ const Clock = ()=>{
     // creates a state storing the current time string
     const [currentTime,setCurrentTime] = useState(new Date()); 
     const months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-    const day = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun" ];
+    const day = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" ];
 
     // setInterval runs a function (first parameter) ever 1000 (second parameter)
     const interval = setInterval( ()=>setCurrentTime(new Date()),1000); 
@@ -22,7 +32,12 @@ const Clock = ()=>{
         }
     },[]); 
 
-    return (<h1>{currentTime.getHours()}:{currentTime.getMinutes()}:{currentTime.getSeconds()}/ {day[currentTime.getDay()]} {months[currentTime.getMonth()]} /{currentTime.getDate()},{currentTime.getFullYear()} </h1>); // displays the current time and date and is updated everytime currentTime is updated
+    return (
+    <div style={styleSheet.div}>
+        <h1 style={styleSheet.top}>{currentTime.getHours()}:{currentTime.getMinutes()}:{currentTime.getSeconds()}</h1>
+        <h1 style={styleSheet.bot}> {day[currentTime.getDay()]} {months[currentTime.getMonth()]} {currentTime.getDate()}, {currentTime.getFullYear()} </h1>
+    </div>
+    ); // displays the current time and date and is updated everytime currentTime is updated
 };
 
-export default Clock; 
+export default Clock;
