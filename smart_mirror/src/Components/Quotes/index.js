@@ -8,7 +8,7 @@ const styleSheet = {
         fontFamily: "Rajdhani",
         position: "absolute",
         top: "600px",
-        right: "300px"
+        right: "800px"
     },
     top:{
         marginBottom: "0px",

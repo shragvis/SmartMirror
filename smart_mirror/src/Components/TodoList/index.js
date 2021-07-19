@@ -15,9 +15,17 @@ const styleSheet = {
     },
     bot:{
         marginTop: "0px"
+    },
+
+    box: {
+        width: "250px",
+        padding: "10px",
+        border: "2px solid white",
+        margin: "0"
     }
-}
-const TodoList = ()=>{
+ }
+
+ const TodoList = ()=>{
     const [currentEvents,setCurrentEvents]= useState([])
     const ISODateString =(d=new Date())=>{
         const pad=n=> (n<10 ? '0'+n : n);
@@ -54,12 +62,15 @@ const TodoList = ()=>{
     )
     return(
         <div style ={styleSheet.div}>
-            <h1> To-Do List </h1>
+            
+            <div style ={styleSheet.box}> 
+            <h1> To-Do List  </h1>
+           
             <div>
                 {currentEvents}
+            </div>
 
             </div>
-    
         </div>
     )
 }

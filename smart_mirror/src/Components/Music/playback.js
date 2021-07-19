@@ -9,7 +9,7 @@ const styleSheet = {
         fontSize: "15px",
         fontFamily: "Rajdhani",
         position: "absolute",
-        top: "500px",
+        top: "400px",
         right: "100px"
     },
     top:{
@@ -30,7 +30,7 @@ export default function Playback({ code }) {
     useEffect(() => {
         if (!accessToken) return
         spotifyApi.setAccessToken(accessToken)
-        const interval = setInterval (updateTrack, 1000)
+        const interval = setInterval (updateTrack, 3000)
         return(
             ()=>{clearInterval(interval)}
         )
@@ -50,7 +50,9 @@ export default function Playback({ code }) {
     }
 
     return <div style ={styleSheet.div}>
-        <div>{currentTrack?.m} - {currentTrack?.a}</div>
+        <h2>Currently Playing...</h2>
         <img src={currentTrack?.i}/>    
+        <div>{currentTrack?.m} - {currentTrack?.a}</div>
+        
     </div>
 }
