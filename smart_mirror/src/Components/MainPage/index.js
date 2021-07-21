@@ -9,21 +9,51 @@ import Login from '../Music';
 const styleSheet = {
     div: {
         backgroundColor: '#C9CAE8',
-        height: "100vh",
-        margin: "0"
+        height: "95vh",
+        margin: "0",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    },
+
+    flex:{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginTop: "0"
+    
+    },
+    right:{
+        paddingRight: "50px"
     }
+
 }
 
 const MainPage = ()=> {
     
     return(
         <div style = {styleSheet.div}>
-            <Clock/>
-            <TodoList/>
-            <Greeting/>
+            <div style = {{...styleSheet.flex}}>
+            <Clock/> 
+            <div style = {{paddingTop: "30px", paddingRight: "100px"}}><Greeting/></div>
+            <div style = {styleSheet.right}>
             <Weather/>
+            </div>
+            </div>
+            <div style = {styleSheet.flex}>
+                <div></div>
+            <div style = {{paddingTop: "100px", paddingRight: "50px"}}>
+            <TodoList/>
+            </div>
+            </div>
+            <div style = {{paddingTop: "-1000px"}}>
+            <Login/>
+            <div style = {{paddingTop: "10px", textAlign: "center"}}>
             <Quotes/>  
-            <Login/>          
+            </div>
+            </div>
+            
+           
     
         </div>
     ); 

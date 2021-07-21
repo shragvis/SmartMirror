@@ -3,13 +3,15 @@ const styleSheet = {
     div: {
         paddingLeft: "50px",
         fontSize: "12px",
-        fontFamily: "Rajdhani"
+        fontFamily: "Rajdhani",
+        margin: "0",
     },
     top:{
-        marginBottom: "0px",
+       margin: "0"
+
     },
     bot:{
-        marginTop: "0px"
+        margin: "0"
     }
     
 }

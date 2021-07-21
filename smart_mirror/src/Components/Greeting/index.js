@@ -1,12 +1,12 @@
 import React, {useState} from 'react'; 
 const styleSheet = {
     div: {
-        paddingLeft: "50px",
+        paddingLeft: "30px",
         fontSize: "20px",
         fontFamily: "Rajdhani",
-        position: "absolute",
-        top: "100px",
-        left: "540px"
+        textAlign: "center",
+        marginTop: "0"
+        
     },
     top:{
         marginBottom: "0px",

@@ -3,12 +3,9 @@ import axios from 'axios';
 
 const styleSheet = {
     div: {
-        paddingLeft: "50px",
+        paddingLeft: "30px",
         fontSize: "12px",
         fontFamily: "Rajdhani",
-        position: "absolute",
-        top: "10px",
-        right: "100px"
     },
     top:{
         marginBottom: "0px",

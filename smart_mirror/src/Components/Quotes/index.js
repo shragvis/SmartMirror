@@ -6,9 +6,7 @@ const styleSheet = {
         paddingLeft: "50px",
         fontSize: "15px",
         fontFamily: "Rajdhani",
-        position: "absolute",
-        top: "600px",
-        right: "800px"
+        textAlign: "center"
     },
     top:{
         marginBottom: "0px",
